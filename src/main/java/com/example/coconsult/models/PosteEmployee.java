@@ -1,0 +1,59 @@
+package com.example.coconsult.models;
+
+public enum PosteEmployee {
+    // Postes de bureau
+    ASSISTANT_ADMINISTRATIF,
+    ASSISTANT_DE_DIRECTION,
+    SECRETAIRE,
+    COMPTABLE,
+    COMMERCIAL,
+    CHARGE_DE_MARKETING,
+    RESPONSABLE_RESSOURCES_HUMAINES,
+
+    // Postes techniques
+    INGENIEUR_INFORMATIQUE,
+    DEVELOPPEUR_WEB,
+    TECHNICIEN_MAINTENANCE,
+    ELECTRICIEN,
+    PLOMBIER,
+    MECANICIEN,
+
+    // Postes de production
+    OPERATEUR_MACHINE,
+    OUVRIER_USINE,
+    MANUTENTIONNAIRE,
+    CARISTE,
+    AGENT_PRODUCTION,
+    CHEF_EQUIPE,
+
+    // Postes de service client
+    CONSEILLER_CLIENTELE,
+    VENDEUR,
+    AGENT_ACCUEIL,
+    TELECONSEILLER,
+    HOTE_CAISSE,
+    SERVEUR,
+
+    // Postes de direction
+    DIRECTEUR_GENERAL,
+    DIRECTEUR_COMMERCIAL,
+    DIRECTEUR_FINANCIER,
+    DIRECTEUR_RESSOURCES_HUMAINES,
+    CHEF_PROJET,
+    MANAGER,
+
+    // Postes spécifiques à l'industrie
+    ENSEIGNANT,
+    INFIRMIER,
+    AVOCAT,
+    INGENIEUR,
+    ARCHITECTE,
+
+    // Autres postes
+    CHAUFFEUR,
+    AGENT_SECURITE,
+    AGENT_NETTOYAGE,
+    JARDINIER,
+    EMPLOYE_MAISON
+
+}

@@ -14,19 +14,19 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Conge implements Serializable {
+public class ContratEmployee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_conge;
+    private Long id_detail_contrat_e;
+
     @Temporal(TemporalType.DATE)
     private Date date_debut;
     @Temporal(TemporalType.DATE)
     private Date date_fin;
+
     @Enumerated(EnumType.STRING)
-    private CongeType typeC;
-    @Enumerated(EnumType.STRING)
-    private CongeStatut StatutC;
-    private String commentaire;
-    private String justification;
+    private ContratEmployeeType typeCE;
+
+    private int duree_hebdomadaire;
 
 }

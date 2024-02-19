@@ -14,19 +14,15 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Conge implements Serializable {
+public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_conge;
+    private Long id_employe ;
     @Temporal(TemporalType.DATE)
-    private Date date_debut;
-    @Temporal(TemporalType.DATE)
-    private Date date_fin;
+    private Date date_embauche ;
     @Enumerated(EnumType.STRING)
-    private CongeType typeC;
-    @Enumerated(EnumType.STRING)
-    private CongeStatut StatutC;
-    private String commentaire;
+    private PosteEmployee PosteEmployee;
+    private Float salaire_base ;
     private String justification;
 
 }
