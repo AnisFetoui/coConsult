@@ -24,6 +24,9 @@ public class SalaireEmployee implements Serializable {
     private Float heures_supplementaires ;
     private Float montant_heures_supplementaires ;
     private Float total_salaire;
+    @ManyToOne(cascade = CascadeType.ALL)
+    Employee employe;
+
 
 
 }

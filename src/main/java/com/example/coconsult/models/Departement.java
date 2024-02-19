@@ -8,6 +8,8 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -20,5 +22,7 @@ public class Departement implements Serializable {
     private Long id_departement;
     private String libelle ;
     private int maxSaturation;
+    @OneToMany(mappedBy="departement",fetch = FetchType.EAGER)
+    Set<Employee> employees;
 
 }

@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -24,5 +25,25 @@ public class Employee implements Serializable {
     private PosteEmployee PosteEmployee;
     private Float salaire_base ;
     private String justification;
+    @ManyToOne(cascade = CascadeType.ALL)
+    Departement departement;
+    @OneToMany(mappedBy="employee",fetch = FetchType.EAGER)
+    Set<Conge> conges;
 
+    @OneToMany(mappedBy="employe",fetch = FetchType.EAGER)
+    Set<SalaireEmployee> salaireEmployees;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    PerformanceEmployee performanceEmployee;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    HistoriqueEmployee historiqueEmployee;
+
+    @OneToMany(mappedBy="empl",fetch = FetchType.EAGER)
+    Set<ContratEmployee> contratEmployees;
+    @OneToMany(mappedBy="emp",fetch = FetchType.EAGER)
+    Set<Absence> absences;
+
+    //@ManyToOne(optional = true)
+    // private User user;
 }

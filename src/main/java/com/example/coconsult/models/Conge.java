@@ -29,4 +29,8 @@ public class Conge implements Serializable {
     private String commentaire;
     private String justification;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    Employee employee;
+
+
 }

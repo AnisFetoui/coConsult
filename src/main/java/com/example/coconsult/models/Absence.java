@@ -27,4 +27,7 @@ public class Absence implements Serializable {
     private String motif ;
     private String justification;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    Employee emp;
+
 }

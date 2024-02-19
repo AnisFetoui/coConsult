@@ -29,4 +29,7 @@ public class ContratEmployee implements Serializable {
 
     private int duree_hebdomadaire;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    Employee empl;
+
 }
