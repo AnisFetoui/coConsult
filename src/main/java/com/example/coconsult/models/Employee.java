@@ -43,6 +43,8 @@ public class Employee implements Serializable {
     Set<ContratEmployee> contratEmployees;
     @OneToMany(mappedBy="emp",fetch = FetchType.EAGER)
     Set<Absence> absences;
+    @ManyToOne (cascade = CascadeType.ALL)
+    Team team;
 
     //@ManyToOne(optional = true)
     // private User user;

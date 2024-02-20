@@ -1,17 +1,25 @@
 package com.example.coconsult.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
-    private String description;
+    private Long task_id;
+    private String task_name;
+    private String task_description;
     private String owner;
     private Date startDate;
     private Date endDate;
@@ -19,14 +27,9 @@ public class Task {
     private Priority priority;
     private int progression;
     private TaskStatus status;
-    private String color;
     private String tags;
     private Date dueDate;
     private TypeDependance typeDependance;
-    @ManyToOne
-    private Task dependency;
-    @OneToMany(mappedBy = "dependency")
-    private List<Task> dependentTasks;
     @ManyToOne
     Project project;
 

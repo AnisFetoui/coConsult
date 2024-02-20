@@ -23,13 +23,16 @@ public class Resources {
     float Price ;
     @Enumerated(EnumType.STRING)
     ResourceStatus ReStatus ;
+    @Enumerated(EnumType.STRING)
+    ResourcesCategorie Categorie ;
 
 
 
 
     @OneToMany(mappedBy = "ressources")
     private List<Stock> stocks;
-
+    @ManyToMany
+    List <Project> projects;
 
 
 

@@ -1,9 +1,18 @@
 package com.example.coconsult.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 
 public class Project {
     @Id
@@ -29,5 +38,6 @@ public class Project {
     Consultant consultant;
     @OneToMany(mappedBy = "project")
     private List<Task> taskList;
-
+    @ManyToMany
+    List<Resources> resources;
 }

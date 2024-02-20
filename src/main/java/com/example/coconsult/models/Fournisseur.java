@@ -22,8 +22,6 @@ public class Fournisseur {
     String Nom;
     String Address;
     Long Contact ;
-    @Temporal(TemporalType.DATE)
-    Date EntryDate ;
     @Enumerated(EnumType.STRING)
     TypeFournisseur TypeFournisseur ;
     float score ;
