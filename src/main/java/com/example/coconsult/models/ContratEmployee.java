@@ -18,6 +18,8 @@ public class ContratEmployee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_detail_contrat_e;
+    private Long rib;
+
 
     @Temporal(TemporalType.DATE)
     private Date date_debut;
